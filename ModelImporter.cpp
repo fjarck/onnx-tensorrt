@@ -447,10 +447,6 @@ bool ModelImporter::supportsModel(
 // Mark experimental ops as unsupported
 bool ModelImporter::supportsOperator(const char* op_name) const
 {
-    if (std::string(op_name) == "NonMaxSuppression")
-    {
-        return false;
-    }
     return _op_importers.count(op_name);
 }
 
